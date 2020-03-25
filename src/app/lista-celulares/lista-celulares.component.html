@@ -1,0 +1,45 @@
+<div class="flex fill column lista-celulares">
+
+  <h1>Ms CellPhones</h1>
+
+
+  <div class="flex row celular" *ngFor="let celular of celulares">
+    <img [src]="celular.urlImagem">
+
+    <!-- <div class="espaco"></div> -->
+
+    <div class="grow flex column descricao-celular">
+
+      <div>
+        <h2>
+          {{ celular.nome }}
+        </h2>
+        <p>
+          {{ celular.descricao }}
+        </p>
+        <p>
+          {{ celular.memoria }}
+        </p>
+        <p>
+          {{ celular.marca }}
+        </p>
+        <p>
+          {{ celular.valor }}
+        </p>
+      </div>
+
+      <div class="grow"></div>
+
+      <div class="flex row">
+  
+        <div class="grow"></div>
+        <button>DETALHES</button>
+      </div>
+
+    </div>
+
+    <!-- <div class="espaco"></div> -->
+
+  </div>
+
+</div>
