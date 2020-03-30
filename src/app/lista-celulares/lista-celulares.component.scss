@@ -1,12 +1,5 @@
 .lista-celulares {
    
-    h1 {
-        margin: 32px;
-        font-weight: 200px;
-        font-size: 42px;
-        font-family: 100px;
-    }
-
     h2 {
         font-weight: 400;
         font-size: 26px;
@@ -15,8 +8,8 @@
 
     }
     p {
-        font-weight: 300px;
-        font-family: 300px;
+        font-weight: 600px;
+        font-family: 600px;
         margin: 0 32px 16px 32px;
         text-align: center;
     }
@@ -24,7 +17,7 @@
     .celular {
         margin: 0 32px 16px 32px;
         height: 320px;
-        background-color:lightgray;
+        background-color: white;
         box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
         border-radius: 4px;
         width: 690px;
@@ -35,8 +28,8 @@
             font-style: inherit;
             width: 100%;
             text-align: left;
-            font-family: 400px;
-            font-weight: 500px;
+            font-family: 1000px;
+            font-weight: 1000px;
             
         }
 
@@ -44,14 +37,15 @@
             flex-grow: 0;
             border-radius: 4px 0 0 4px;
             max-width: 290px;
-            background-color: lightgrey;
+            background-color: white;
+            object-fit: cover;
            
         }
 
         .grow {
             flex-grow: 3;
             width: 300;
-
+            float: right;
         }
 
         .espaco {
@@ -63,10 +57,24 @@
             // margin-bottom: 19px;
             width: 96px;
             font-weight: 500;
-            float: left;
-            background-color: orange;
+            background-color: coral;
             border-radius: 100px;
             border-color: black;
+            position: relative;
+            float: right;
+            top: 290px;
+            right: 20px;
         }
+        .example-container {
+            width: 400px;
+            height: 200px;
+            margin: 10px;
+            border: 1px solid black;
+          }
     }
+    .example-card {
+        max-width: 400px;
+        float: right;
+      }
+      
 }

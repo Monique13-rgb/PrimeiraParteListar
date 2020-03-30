@@ -1,13 +1,9 @@
+<mat-card class="exemple-card">
 <div class="flex fill column lista-celulares">
-
-  <h1>Ms CellPhones</h1>
-
-
   <div class="flex row celular" *ngFor="let celular of celulares">
     <img [src]="celular.urlImagem">
 
-    <!-- <div class="espaco"></div> -->
-
+    <mat-card-content>
     <div class="grow flex column descricao-celular">
 
       <div>
@@ -27,19 +23,12 @@
           {{ celular.valor }}
         </p>
       </div>
-
-      <div class="grow"></div>
-
-      <div class="flex row">
+    </div>  
+    </mat-card-content>
   
-        <div class="grow"></div>
-        <button>DETALHES</button>
+        <div class="grow">
+        <button>DETALHES</button> 
       </div>
-
-    </div>
-
-    <!-- <div class="espaco"></div> -->
-
-  </div>
-
 </div>
+</div>
+</mat-card>
