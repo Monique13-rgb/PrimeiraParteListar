@@ -78,6 +78,11 @@ export class ListaCelularesComponent implements OnInit {
         valor: 'R$:2,900 ou 12x R$210,16',
 
       }
+  
     ];
-    }
+  
   }
+  minhafuncao(){
+    alert("deu certo!");
+  }    
+}
