@@ -1,11 +1,11 @@
 <mat-card class="exemple-card">
 <div class="flex fill column lista-celulares">
-  <div class="flex row celular" *ngFor="let celular of celulares">
+  <div class="flex row celular" *ngFor="let celular of appService.celulares">
     <img [src]="celular.urlImagem">
 
     <mat-card-content>
     <div class="grow flex column descricao-celular">
-
+ 
       <div>
         <h2>
           {{ celular.nome }}
@@ -25,10 +25,12 @@
       </div>
     </div>  
     </mat-card-content>
-  
-        <div class="grow">
+         <div class="grow">
         <button (click)="minhafuncao()">DETALHES</button> 
       </div>
 </div>
+</div>
+<div>
+<button (click)="navegar()">Navegar para cadastro</button>
 </div>
 </mat-card>
