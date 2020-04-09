@@ -6,7 +6,7 @@ import { AdicionaCelularesComponent } from './adiciona-celulares/adiciona-celula
 
 
 const routes: Routes = [
-  { path: '', redirectTo: 'celulares', pathMatch: 'full' },
+  { path: '', redirectTo: 'Listar', pathMatch: 'full' },
   { path: 'Listar', component: ListaCelularesComponent },
   { path: 'Adicionar', component: AdicionaCelularesComponent },
   { path: '**', component: PaginaNaoEncontradaComponent }

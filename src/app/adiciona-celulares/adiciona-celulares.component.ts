@@ -10,8 +10,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./adiciona-celulares.component.scss']
 })
 export class AdicionaCelularesComponent implements OnInit {
+  
   formulario = new FormGroup({
-    
+    id: new FormControl(null),
     urlImagem: new FormControl(null, [Validators.required]),
   nome: new FormControl(null, [Validators.required]),
       descricao: new FormControl(null, [Validators.required]),
@@ -32,7 +33,7 @@ export class AdicionaCelularesComponent implements OnInit {
 }
 
 enviar() {
-      this.appService.celulares.push()
+      this.appService.celulares.push(this.formulario.value);
 
       this.router.navigateByUrl('Listar')
     
