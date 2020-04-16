@@ -1,6 +1,6 @@
 
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, OnDestroy } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -20,7 +20,9 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { AdicionaCelularesComponent } from './adiciona-celulares/adiciona-celulares.component';
 
-import { AppService } from './app.service'
+import { AppService } from './app.service';
+import { DetalhesComponent } from './detalhes/detalhes.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,6 +30,7 @@ import { AppService } from './app.service'
     PaginaNaoEncontradaComponent,
     RootNavComponent,
     AdicionaCelularesComponent,
+    DetalhesComponent,
   ],
   imports: [
     BrowserModule,

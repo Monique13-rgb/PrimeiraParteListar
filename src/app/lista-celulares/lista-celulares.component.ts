@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AppService } from '../app.service';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
+import { Celular } from '../models/celular.model';
 
 @Component({
   selector: 'app-lista-celulares',
@@ -9,15 +10,20 @@ import { Router } from '@angular/router';
 })
 export class ListaCelularesComponent implements OnInit {
 
-  constructor(public appService: AppService, public router: Router) { }
+celular: Celular []=[];
 
+  constructor(public appService: AppService, public router: Router,private route: ActivatedRoute) { }
+  
   ngOnInit(): void {
+    
   }
-  minhafuncao(){
-    alert("deu certo!");
+  
+  detalhes(celular: Celular){
+      this.router.navigate(['celular',celular.id]);
   } 
   
   navegar () {
     this.router.navigateByUrl('Adicionar')
-  }   
+  }  
+  
 }

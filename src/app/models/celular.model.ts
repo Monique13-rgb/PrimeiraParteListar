@@ -7,5 +7,6 @@ export class Celular {
   memoria: string;
   marca: string;
   valor: string;
+  static id: any;
 
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { FormGroup, FormControl, Validators, AbstractControl, ValidationErrors } from '@angular/forms';
 import { AppService } from '../app.service';
 import { Router } from '@angular/router';
 
@@ -16,7 +16,7 @@ export class AdicionaCelularesComponent implements OnInit {
     urlImagem: new FormControl(null, [Validators.required]),
   nome: new FormControl(null, [Validators.required]),
       descricao: new FormControl(null, [Validators.required]),
-       memoria: new FormControl(null, [Validators.required]),
+       memoria: new FormControl(null, [this.somenteNumeros, Validators.required]),
        marca: new FormControl(null, [Validators.required]),
        valor: new FormControl(null, [Validators.required])
      });
@@ -25,9 +25,19 @@ export class AdicionaCelularesComponent implements OnInit {
 
      constructor(public appService: AppService, public router: Router) { }
 
-  ngOnInit(): void {
-    
-  }
+ 
+     ngOnInit(): void {}
+     somenteNumeros(control: AbstractControl): ValidationErrors | null {
+      const texto = control.value;
+      if (isNaN(Number(texto))) {
+        return { somenteNumeros: true };
+      } else {
+        return null;
+      }
+  
+    }
+  
+
   limpar() {
     this.jsonDados = null;
 }

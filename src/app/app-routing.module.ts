@@ -3,12 +3,14 @@ import { Routes, RouterModule } from '@angular/router';
 import { ListaCelularesComponent } from './lista-celulares/lista-celulares.component';
 import { PaginaNaoEncontradaComponent } from './pagina-nao-encontrada/pagina-nao-encontrada.component';
 import { AdicionaCelularesComponent } from './adiciona-celulares/adiciona-celulares.component';
+import { DetalhesComponent } from './detalhes/detalhes.component';
 
 
 const routes: Routes = [
   { path: '', redirectTo: 'Listar', pathMatch: 'full' },
   { path: 'Listar', component: ListaCelularesComponent },
   { path: 'Adicionar', component: AdicionaCelularesComponent },
+  { path: 'celular/id', component: DetalhesComponent},
   { path: '**', component: PaginaNaoEncontradaComponent }
 ];
 

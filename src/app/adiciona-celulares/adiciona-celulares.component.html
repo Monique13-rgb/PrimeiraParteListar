@@ -30,6 +30,8 @@
 
             <mat-label>Memoria</mat-label>
             <input matInput formControlName="memoria" name="memoria">
+            <mat-error *ngIf="formulario.controls['memoria'].hasError('somenteNumeros')">Somente Números
+            </mat-error>
 
         </mat-form-field>
         <br><br>

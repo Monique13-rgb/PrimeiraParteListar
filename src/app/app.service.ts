@@ -11,7 +11,7 @@ celulares: Celular[] = []
   constructor() {
     
     this.celulares = [{
-      id: 0, 
+      id: 1, 
       urlImagem: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-11-pro-max-silver-select-2019?wid=834&hei=1000&fmt=jpeg&qlt=95&op_usm=0.5,0.5&.v=1566953858420",
       nome: "Iphone 11pro Max ",
       descricao: "Lançamento",
