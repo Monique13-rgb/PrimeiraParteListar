@@ -16,9 +16,10 @@ export class AdicionaCelularesComponent implements OnInit {
     urlImagem: new FormControl(null, [Validators.required]),
   nome: new FormControl(null, [Validators.required]),
       descricao: new FormControl(null, [Validators.required]),
-       memoria: new FormControl(null, [this.somenteNumeros, Validators.required]),
+       memoria: new FormControl(null, [this.somenteNumeros,Validators.required]),
        marca: new FormControl(null, [Validators.required]),
-       valor: new FormControl(null, [Validators.required])
+       valor: new FormControl(null, [this.somenteNumeros,Validators.required]),
+       descricaoDetalhada: new FormControl(null, [Validators.required]),
      });
   
      jsonDados: string;

@@ -1,4 +1,12 @@
-<h1>Detalhes {{celular}}</h1>
-<button (click)="voltar()">Voltar para Listar</button>
+<body class="potato">
+<h1>Detalhes</h1>
+    <p> Nome: {{ celular.nome }}</p>
+    <p> Descrição: {{ celular.descricaoDetalhada }}</p>
+    <p> Mémoria: {{ celular.memoria }}</p>
+    <p> Valor: {{ celular.valor }}</p>
+    <p>Marca: {{ celular.marca }}</p>
+
+    <button mat-raised-button color="accent" (click)="voltar()">Voltar</button>
+</body>
 
 

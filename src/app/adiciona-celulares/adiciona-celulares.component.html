@@ -1,53 +1,62 @@
-<form [formGroup]="formulario" (ngSubmit)="enviar()">
+<body class="formulario">
 
-    <mat-card class="formulario">
+<form [formGroup]="formulario" (ngSubmit)="enviar()">
+    <br><br>
         <mat-card-title>Cadastro dos Produtos</mat-card-title>
 
-    <br><br>
-        <mat-form-field appearance="fill">
+    <br><br><br>
+
+      <mat-form-field appearance="fill"  class="example-full-width">
 
             <mat-label>Nome</mat-label>
             <input matInput formControlName="nome" name="nome">
 
         </mat-form-field>
-
-        <br><br>
+        
         <mat-form-field appearance="fill">
 
             <mat-label>Imagem</mat-label>
             <input matInput formControlName="urlImagem" name="urlImagem">
 
         </mat-form-field>
-<br><br>
-        <mat-form-field appearance="fill">
-
-            <mat-label>Descrição</mat-label>
+        <br><br><br>
+        <mat-form-field appearance="fill" class="example-full-width">
+         <mat-label>Descrição</mat-label>
             <input matInput formControlName="descricao" name="Descrição">
 
         </mat-form-field>
-        <br><br>
+
+        <mat-form-field appearance="fill">
+
+            <mat-label>Descrição Detalhada</mat-label>
+            <input matInput formControlName="descricaoDetalhada" name="Descrição Detalhada">
+
+        </mat-form-field>
+    <br><br><br>
         <mat-form-field appearance="fill">
 
             <mat-label>Memoria</mat-label>
-            <input matInput formControlName="memoria" name="memoria">
+            <input matInput formControlName="memoria" name="memoria"> 
             <mat-error *ngIf="formulario.controls['memoria'].hasError('somenteNumeros')">Somente Números
-            </mat-error>
-
+            </mat-error>  
         </mat-form-field>
-        <br><br>
-        <mat-form-field appearance="fill">
+
+        <br><br><br>
+        <td><mat-form-field appearance="fill" class="example-full-width">
             
             <mat-label>Marca</mat-label>
             <input matInput formControlName="marca" name="marca">
 
         </mat-form-field>
-        <br><br>
         <mat-form-field appearance="fill">
 
             <mat-label>Valor</mat-label>
             <input matInput type="number" formControlName="valor">
+            <mat-error *ngIf="formulario.controls['valor'].hasError('somenteNumeros')">Somente Números
+            </mat-error>
                 </mat-form-field>
                 <mat-card-actions>
+                   <div>
                     <button mat-button (click)="limpar()" type="reset">
                         <mat-icon>clear</mat-icon>
                         LIMPAR
@@ -56,10 +65,12 @@
                         <mat-icon>send</mat-icon>
                         ENVIAR
                     </button>
+                    </div>
                 </mat-card-actions>
-    </mat-card>
-</form>
+            
+        </form>
 <div *ngIf="jsonDados" class="dados-enviados">
     <h3>Dados enviados:</h3>
     <p>{{ jsonDados }}</p>
 </div>
+</body>

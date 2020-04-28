@@ -8,5 +8,6 @@ export class Celular {
   marca: string;
   valor: string;
   static id: any;
+  descricaoDetalhada: string;
 
 }

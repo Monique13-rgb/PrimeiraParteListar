@@ -10,7 +10,7 @@ const routes: Routes = [
   { path: '', redirectTo: 'Listar', pathMatch: 'full' },
   { path: 'Listar', component: ListaCelularesComponent },
   { path: 'Adicionar', component: AdicionaCelularesComponent },
-  { path: 'celular/id', component: DetalhesComponent},
+  { path: 'celular/:id', component: DetalhesComponent},
   { path: '**', component: PaginaNaoEncontradaComponent }
 ];
 
